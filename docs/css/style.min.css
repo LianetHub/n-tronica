@@ -1,0 +1,471 @@
+@font-face {
+  font-family: "Nanotronica";
+  font-display: swap;
+  src: url("../fonts/Nanotronica-Bold.woff2") format("woff2"), url("../fonts/Nanotronica-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nanotronica";
+  font-display: swap;
+  src: url("../fonts/Nanotronica-Regular.woff2") format("woff2"), url("../fonts/Nanotronica-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+[class^=icon-]:before,
+[class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=icon-]:before,
+[class*=" icon-"]:before {
+  display: block;
+}
+
+.icon-quotes:before {
+  content: "\e908";
+}
+
+.icon-arrows:before {
+  content: "\e900";
+}
+
+.icon-envelope:before {
+  content: "\e901";
+}
+
+.icon-left:before {
+  content: "\e902";
+}
+
+.icon-mail:before {
+  content: "\e903";
+}
+
+.icon-minus:before {
+  content: "\e904";
+}
+
+.icon-plus:before {
+  content: "\e905";
+}
+
+.icon-right:before {
+  content: "\e906";
+}
+
+.icon-telegram:before {
+  content: "\e907";
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header {
+  padding: 1.25rem 0;
+}
+@media (min-width: 1024px) {
+  .header {
+    padding: 1.25rem 0;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    padding: 1.3125rem 0;
+  }
+}
+@media (min-width: 1728px) {
+  .header {
+    padding: 1.6875rem 0;
+  }
+}
+@media (min-width: 2560px) {
+  .header {
+    padding: 2.75rem 0;
+  }
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  width: 100%;
+  max-width: 10.9375rem;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    max-width: 10.3125rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header__logo {
+    max-width: 8.375rem;
+  }
+}
+@media (min-width: 1728px) {
+  .header__logo {
+    max-width: 10.9375rem;
+  }
+}
+@media (min-width: 2560px) {
+  .header__logo {
+    max-width: 16.125rem;
+  }
+}
+.header__logo img {
+  width: 100%;
+}
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header__contact {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.1666666667;
+}
+.header__contact::before {
+  content: attr(data-type);
+  order: -1;
+  text-align: left;
+  font-weight: 700;
+  width: 0.8em;
+}
+@media (min-width: 1200px) {
+  .header__contact::before {
+    width: 1.1em;
+  }
+}
+.header__contact::after {
+  order: -1;
+  content: "";
+  display: block;
+  background: currentColor;
+  flex-shrink: 0;
+  width: 0.5625rem;
+  height: 0.5625rem;
+  margin-right: 0.1875rem;
+}
+@media (min-width: 1024px) {
+  .header__contact::after {
+    margin-right: 0.375rem;
+    width: 0.5625rem;
+    height: 0.5625rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header__contact::after {
+    width: 0.45rem;
+    height: 0.45rem;
+  }
+}
+@media (min-width: 1728px) {
+  .header__contact::after {
+    width: 0.59375rem;
+    height: 0.59375rem;
+    margin-right: 0.5rem;
+  }
+}
+@media (min-width: 2560px) {
+  .header__contact::after {
+    margin-right: 0.6875rem;
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header__contact {
+    font-size: 0.625rem;
+    line-height: 1.2;
+  }
+}
+@media (min-width: 1728px) {
+  .header__contact {
+    font-size: 0.8125rem;
+    line-height: 1.1538461538;
+  }
+}
+@media (min-width: 2560px) {
+  .header__contact {
+    line-height: 1.2105263158;
+    font-size: 1.1875rem;
+  }
+}
+
+html {
+  font-size: 3.7209302326vw;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 2.0833333333vw;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 1.5625vw;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.3333333333vw;
+  }
+}
+@media (min-width: 1728px) {
+  html {
+    font-size: 0.9259259259vw;
+  }
+}
+@media (min-width: 2560px) {
+  html {
+    font-size: 0.625vw;
+  }
+}
+
+body {
+  font-family: "Nanotronica", sans-serif;
+  font-size: 1rem;
+  min-width: 20rem;
+  min-height: 100%;
+  line-height: normal;
+  color: #fff;
+  background: #000;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
+.page {
+  flex: 1 1 auto;
+  overflow-x: clip;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.container.container-fluid {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    box-sizing: content-box;
+    max-width: 34.875rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 45.6875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 53.5625rem;
+  }
+}
+@media (min-width: 1728px) {
+  .container {
+    max-width: 77rem;
+    padding: 0 2.25rem;
+  }
+}
+@media (min-width: 2560px) {
+  .container {
+    max-width: 114.0625rem;
+    padding: 0 3.375rem;
+  }
+}
+
+.hero {
+  padding: 7.625rem 0 1.375rem 0;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 8.625rem 0 2.625rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .hero {
+    padding: 12.375rem 0 1.25rem 0;
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    padding: 9.1875rem 0 1.25rem 0;
+  }
+}
+@media (min-width: 1728px) {
+  .hero {
+    padding: 14.375rem 0 1.8125rem 0;
+  }
+}
+@media (min-width: 2560px) {
+  .hero {
+    padding: 20.5625rem 0 2.625rem 0;
+  }
+}
+.hero__media {
+  width: 100%;
+}
+.hero__media img {
+  width: 100%;
+}
+.hero__text {
+  margin-left: auto;
+  margin-top: 149px;
+}
+@media (max-width: 768px) {
+  .hero__text {
+    margin-right: -1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero__text {
+    margin-top: 6.125rem;
+    width: 63%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero__text {
+    margin-right: -5.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__text {
+    width: 50%;
+    margin-top: 7.6875rem;
+    padding-left: 0.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__text {
+    margin-top: 3.3125rem;
+    padding-left: 0.75rem;
+  }
+}
+@media (min-width: 1728px) {
+  .hero__text {
+    padding-left: 1.125rem;
+    margin-top: 6.4375rem;
+  }
+}
+@media (min-width: 2560px) {
+  .hero__text {
+    padding-left: 1.5rem;
+    margin-top: 10.0625rem;
+  }
+}
+.hero__title {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 1.125rem;
+    line-height: 1.1666666667;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .hero__title {
+    margin-right: -2.5rem;
+  }
+}
+@media (min-width: 1728px) {
+  .hero__title {
+    font-size: 1.9375rem;
+    line-height: 1.1612903226;
+  }
+}
+@media (min-width: 1728px) and (max-width: 2560px) {
+  .hero__title {
+    margin-right: -0.4375rem;
+  }
+}
+@media (min-width: 2560px) {
+  .hero__title {
+    line-height: 1.2;
+    font-size: 2.8125rem;
+  }
+}
+.hero__subtitle {
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .hero__subtitle {
+    margin-top: 1.125rem;
+    font-size: 0.8125rem;
+    line-height: 1.2307692308;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__subtitle {
+    margin-top: 1.0625rem;
+    font-size: 0.9375rem;
+    line-height: 1.2;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .hero__subtitle {
+    margin-right: -1.875rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1728px) {
+  .hero__subtitle {
+    max-width: 25rem;
+  }
+}
+@media (min-width: 1728px) {
+  .hero__subtitle {
+    margin-top: 1.4375rem;
+    font-size: 1.125rem;
+    line-height: 1.2222222222;
+  }
+}
+@media (min-width: 2560px) {
+  .hero__subtitle {
+    margin-top: 2rem;
+    font-size: 1.6875rem;
+    line-height: 1.2222222222;
+  }
+}

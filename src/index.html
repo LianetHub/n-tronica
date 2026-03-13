@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {})
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page">
+                <section class="hero">
+                    <div class="container">
+                        <picture class="hero__media">
+                            <source media="(min-width: 1024px)" srcset="@img/image.png">
+                            <img src="@img/image-mobile.png" alt="photo">
+                        </picture>
+                        <div class="hero__text">
+                            <h1 class="hero__title">N-tronica is a group of companies in&nbsp;the Element holding (the largest developer and leading manufacturer of microelectronics in Russia)</h1>
+                            <p class="hero__subtitle">Nanotronica was established to integrate leading competencies in semiconductor manufacturing equipment engineering and&nbsp;to&nbsp;supply semiconductor fabs with both proprietary and partner-developed equipment</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>

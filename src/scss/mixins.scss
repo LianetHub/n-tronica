@@ -1,0 +1,58 @@
+@use "sass:math";
+
+$dimensions: (
+	md1: $width-md1,
+	md2: $width-md2,
+	md3: $width-md3,
+	md4: $width-md4,
+	md5: $width-md5,
+	md6: $width-md6,
+);
+
+@function strip-unit($number) {
+	@if type-of($number)=='number' and not unitless($number) {
+		@return math.div($number, ($number * 0 + 1));
+	}
+
+	@return $number;
+}
+
+@function get-vw($px-value, $dimension-key) {
+	$width: map-get($dimensions, $dimension-key);
+	$val: strip-unit($px-value);
+	$w: strip-unit($width);
+
+	@return math.div($val * 100, $w) * 1vw;
+}
+
+@function rem($px) {
+	$current-base: if(global-variable-exists(base-size), $base-size, 16);
+	$result: math.div(strip-unit($px), strip-unit($current-base));
+	@return #{$result}rem;
+}
+
+@mixin html-scale() {
+	$current-base: if(global-variable-exists(base-size), $base-size, 16);
+
+	font-size: get-vw($current-base, md6);
+
+	@media (min-width: 768px) {
+		font-size: get-vw($current-base, md5);
+	}
+
+	@media (min-width: 1024px) {
+		font-size: get-vw($current-base, md4);
+	}
+
+	@media (min-width: 1200px) {
+		font-size: get-vw($current-base, md3);
+	}
+
+	@media (min-width: 1728px) {
+		font-size: get-vw($current-base, md2);
+	}
+
+	@media (min-width: 2560px) {
+		font-size: get-vw($current-base, md1);
+	}
+}

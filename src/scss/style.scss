@@ -1,0 +1,293 @@
+// Использование модулей SASS
+@use "sass:math";
+// Использование модулей SASS
+// ======================================МИКСИНЫ==============================================
+
+// ======================================МИКСИНЫ==============================================
+
+// ======================================ШРИФТЫ===============================================
+@import "fonts";
+@import "icons";
+// ======================================ШРИФТЫ===============================================
+
+// Шрифт по умолчанию
+$fontfamily: "Nanotronica";
+// Шрифт по умолчанию
+
+$base-size: 16;
+
+
+
+// Параметры макетов для каждого брейкпоинта
+$width-md1: 2560;
+$width-md2: 1728;
+$width-md3: 1200;
+$width-md4: 1024;
+$width-md5: 768;
+$width-md6: 430;
+
+// Брейкпоинты 
+$md1: #{$width-md1}px;
+$md2: #{$width-md2}px;
+$md3: #{$width-md3}px;
+$md4: #{$width-md4}px;
+$md5: #{$width-md5}px;
+
+@import "mixins";
+
+// ПЕРЕМЕННЫЕ
+
+$minWidth: 320;
+// ЦВЕТА
+
+$black: #000;
+$white: #fff;
+
+// Z-Index
+
+$ui-index-1: 1; // Для наполняющих элементов в общем потоке
+$ui-index-2: 2; // Для наполняющих элементов в общем потоке
+$ui-index-3: 3; // Для масок
+$ui-index-4: 4; // Для сайдбаров
+$ui-index-5: 5; // Для модалок
+$ui-index-6: 6; // Для элементов, перекрывающих все
+
+// ОБЩИЕ ПАРАМЕТРЫ
+
+@import "ui";
+// @import "forms";
+@import "header";
+@import "footer";
+
+//=======================================
+
+html {
+    @include html-scale();
+}
+
+body {
+    font-family: $fontfamily, sans-serif;
+    font-size: 1rem;
+    min-width: rem($minWidth);
+    min-height: 100%;
+    line-height: normal;
+    color: $white;
+    background: $black
+}
+
+// ================== ОБОЛОЧКА ==============================
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    overflow-x: clip;
+}
+
+.page {
+    flex: 1 1 auto;
+    overflow-x: clip;
+}
+
+// ================== ОБОЛОЧКА ===============================
+
+// ================== LAYOUT =================================
+
+.container {
+    margin: 0 auto;
+    padding: 0 rem(24);
+
+    &.container-fluid {
+        max-width: 100%;
+    }
+
+    @media (min-width:$md5) {
+        box-sizing: content-box;
+        max-width: rem(558);
+    }
+
+    @media (min-width:$md4) {
+        max-width: rem(731);
+    }
+
+    @media (min-width:$md3) {
+        max-width: rem(857);
+    }
+
+    @media (min-width:$md2) {
+        max-width: rem(1232);
+        padding: 0 rem(36);
+    }
+
+    @media (min-width:$md1) {
+        max-width: rem(1825);
+        padding: 0 rem(54);
+
+    }
+
+}
+
+//=============== LAYOUT ===============================
+
+// =============== MODULES ====================
+// @import "./modules/popup";
+// @import "./modules/preloader";
+
+// =============== MODULES ====================
+
+.hero {
+    padding: rem(122) 0 rem(22) 0;
+
+    @media (min-width:$md5) {
+        padding: rem(138) 0 rem(42) 0;
+    }
+
+    @media (min-width:$md4) {
+        padding: rem(198) 0 rem(20) 0;
+    }
+
+    @media (min-width:$md3) {
+        padding: rem(147) 0 rem(20) 0;
+    }
+
+    @media (min-width:$md2) {
+        padding: rem(230) 0 rem(29) 0;
+    }
+
+    @media (min-width:$md1) {
+        padding: rem(329) 0 rem(42) 0;
+    }
+
+    // .hero__media
+    &__media {
+        width: 100%;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    // .hero__text
+    &__text {
+
+        margin-left: auto;
+        margin-top: 149px;
+
+        @media (max-width:$md5) {
+            margin-right: rem(-20);
+        }
+
+        @media (min-width:$md5) {
+            margin-top: rem(98);
+            width: 63%;
+
+            @media (max-width:$md4) {
+                margin-right: rem(-84);
+            }
+        }
+
+        @media (min-width:$md4) {
+            width: 50%;
+            margin-top: rem(123);
+            padding-left: rem(12);
+        }
+
+        @media (min-width:$md3) {
+            margin-top: rem(53);
+            padding-left: rem(12);
+
+        }
+
+        @media (min-width:$md2) {
+            padding-left: rem(18);
+            margin-top: rem(103);
+
+        }
+
+        @media (min-width:$md1) {
+            padding-left: 1.5rem;
+            margin-top: rem(161);
+
+        }
+    }
+
+    // .hero__title
+    &__title {
+        font-size: rem(20);
+        line-height: math.div(24, 20);
+
+        @media (min-width:$md5) {
+            font-size: rem(18);
+            line-height: math.div(21, 18);
+        }
+
+        @media (min-width:$md4) {
+            font-size: rem(20);
+            line-height: math.div(24, 20);
+
+            @media (max-width:$md3) {
+                margin-right: rem(-40);
+            }
+        }
+
+
+        @media (min-width:$md2) {
+            font-size: rem(31);
+            line-height: math.div(36, 31);
+
+            @media (max-width:$md1) {
+                margin-right: rem(-7);
+            }
+        }
+
+        @media (min-width:$md1) {
+            line-height: math.div(54, 45);
+            font-size: rem(45);
+        }
+    }
+
+    // .hero__subtitle
+    &__subtitle {
+        margin-top: 1rem;
+        font-size: rem(15);
+        line-height: math.div(18, 15);
+
+        @media (min-width:$md5) {
+            margin-top: rem(18);
+            font-size: rem(13);
+            line-height: math.div(16, 13);
+        }
+
+        @media (min-width:$md4) {
+            margin-top: rem(17);
+            font-size: rem(15);
+            line-height: math.div(18, 15);
+
+            @media (max-width:$md3) {
+                margin-right: rem(-30);
+            }
+        }
+
+        @media (min-width:$md3) {
+            @media (max-width:$md2) {
+                max-width: rem(400);
+            }
+        }
+
+        @media (min-width:$md2) {
+            margin-top: rem(23);
+            font-size: rem(18);
+            line-height: math.div(22, 18);
+        }
+
+        @media (min-width:$md1) {
+            margin-top: 2rem;
+            font-size: rem(27);
+            line-height: math.div(33, 27);
+
+        }
+    }
+}
