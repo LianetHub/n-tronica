@@ -1,50 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>N-Tronica</title>
 
-        <meta charset="UTF-8">
-        <meta name="format-detection" content="telephone=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>N-Tronica</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="N-Tronica" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<!-- favicon -->
+	<!-- Open Graph  -->
+	<meta property="og:type" content="business.business">
+	<meta property="og:title" content="@@title">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="/og_image.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:site_name" content="">
+	<meta property="og:locale" content="en_EN">
+	<!-- Open Graph  -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260314143848">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260314143848">
+</head>
 
-        <link rel="stylesheet" href="css/reset.min.css">
-        <link rel="stylesheet" href="css/style.min.css">
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container container-fluid header__container">
+				<a href="/" class="header__logo">
+					<img src="img/logo.svg" alt="logo">
+				</a>
+				<div class="header__contacts">
+					<a href="mailto:info@nanotronica.ru" class="header__contact" data-type="E">info@nanotronica.ru</a>
+					<a href="https://www.ntronica.com" target="_blank" rel="noopener noreferrer" class="header__contact" data-type="S">www.ntronica.com</a>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="hero">
+				<div class="container">
+					<div class="hero__media">
+						<video class="hero__media-video is-desktop" playsinline autoplay loop muted>
+							<source src="files/hero-video-desktop.webm" type='video/webm; codecs="vp9, vorbis"'>
+							<source src="files/hero-video-desktop.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+						<video class="hero__media-video is-mobile" playsinline autoplay loop muted>
+							<source src="files/hero-video-mobile.webm" type='video/webm; codecs="vp9, vorbis"'>
+							<source src="files/hero-video-mobile.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+					</div>
+					<div class="hero__text">
+						<h1 class="hero__title">N-tronica is a group of companies in&nbsp;the Element holding (the largest developer and leading manufacturer of microelectronics in Russia)</h1>
+						<p class="hero__subtitle">Nanotronica was established to integrate leading competencies in semiconductor manufacturing equipment engineering and&nbsp;to&nbsp;supply semiconductor fabs with both proprietary and partner-developed equipment</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+			</div>
+		</footer>
+		<script src="js/app.min.js?_v=20260314143848"></script>
+	</div>
+</body>
 
-    </head>
-    <body>
-        <div class="wrapper">
-            <header class="header">
-                <div class="container container-fluid header__container">
-                    <a href="/" class="header__logo">
-                        <img src="img/logo.svg" alt="logo">
-                    </a>
-                    <div class="header__contacts">
-                        <a href="mailto:info@nanotronica.ru" class="header__contact" data-type="E">info@nanotronica.ru</a>
-                        <a href="https://www.ntronica.com" target="_blank" rel="noopener noreferrer" class="header__contact" data-type="S">www.ntronica.com</a>
-                    </div>
-                </div>
-            </header>
-            <main class="page">
-                <section class="hero">
-                    <div class="container">
-                        <picture class="hero__media">
-                            <source media="(min-width: 1024px)" srcset="img/image.png">
-                            <img src="img/image-mobile.png" alt="photo">
-                        </picture>
-                        <div class="hero__text">
-                            <h1 class="hero__title">N-tronica is a group of companies in&nbsp;the Element holding (the largest developer and leading manufacturer of microelectronics in Russia)</h1>
-                            <p class="hero__subtitle">Nanotronica was established to integrate leading competencies in semiconductor manufacturing equipment engineering and&nbsp;to&nbsp;supply semiconductor fabs with both proprietary and partner-developed equipment</p>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <footer class="footer">
-                <div class="container">
-        
-                </div>
-            </footer>
-            <script src="js/app.min.js"></script>
-        </div>
-    </body>
 </html>

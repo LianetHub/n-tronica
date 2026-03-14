@@ -164,9 +164,29 @@ body {
     // .hero__media
     &__media {
         width: 100%;
+        display: flex;
+        justify-content: center;
 
         & img {
             width: 100%;
+        }
+    }
+
+    // .hero__media-video
+    &__media-video {
+        width: 100vw;
+        height: auto;
+
+        &.is-desktop {
+            @media (max-width:$md4) {
+                display: none;
+            }
+        }
+
+        &.is-mobile {
+            @media (min-width:$md4) {
+                display: none;
+            }
         }
     }
 
@@ -290,4 +310,6 @@ body {
 
         }
     }
+
+
 }
