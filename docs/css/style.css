@@ -212,12 +212,6 @@ body {
 
 .hero__media {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .hero__media img {
@@ -225,7 +219,7 @@ body {
 }
 
 .hero__media-video {
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
