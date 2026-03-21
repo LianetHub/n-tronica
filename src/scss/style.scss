@@ -19,12 +19,12 @@ $base-size: 16;
 
 
 // Параметры макетов для каждого брейкпоинта
-$width-md1: 2560;
-$width-md2: 1728;
-$width-md3: 1200;
-$width-md4: 1024;
-$width-md5: 768;
-$width-md6: 430;
+$width-md1: 2559.98;
+$width-md2: 1727.98;
+$width-md3: 1199.98;
+$width-md4: 1023.98;
+$width-md5: 767.98;
+$width-md6: 429.98;
 
 // Брейкпоинты 
 $md1: #{$width-md1}px;
@@ -142,7 +142,7 @@ body {
     padding: rem(122) 0 rem(22) 0;
 
     @media (min-width:$md5) {
-        padding: rem(138) 0 rem(42) 0;
+        padding: rem(120) 0 rem(42) 0;
     }
 
     @media (min-width:$md4) {
@@ -192,14 +192,14 @@ body {
     &__text {
 
         margin-left: auto;
-        margin-top: 149px;
+        margin-top: rem(149);
 
         @media (max-width:$md5) {
             margin-right: rem(-20);
         }
 
         @media (min-width:$md5) {
-            margin-top: rem(98);
+            margin-top: rem(90);
             width: 63%;
 
             @media (max-width:$md4) {
@@ -209,7 +209,7 @@ body {
 
         @media (min-width:$md4) {
             width: 50%;
-            margin-top: rem(123);
+            margin-top: rem(120);
             padding-left: rem(12);
         }
 
@@ -236,6 +236,7 @@ body {
     &__title {
         font-size: rem(20);
         line-height: math.div(24, 20);
+        font-weight: 700;
 
         @media (min-width:$md5) {
             font-size: rem(18);
