@@ -26,8 +26,10 @@
 	<meta property="og:site_name" content="N-Tronica">
 	<meta property="og:locale" content="en_EN">
 	<!-- Open Graph  -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20260326190729">
-	<link rel="stylesheet" href="css/style.min.css?_v=20260326190729">
+	<link rel="preload" href="files/hero-video-desktop.mp4" as="video" type="video/mp4" fetchpriority="high" media="(min-width: 769px)">
+	<link rel="preload" href="files/hero-video-mobile.mp4" as="video" type="video/mp4" fetchpriority="high" media="(max-width: 768px)">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260326192807">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260326192807">
 </head>
 
 <body>
@@ -47,11 +49,11 @@
 			<section class="hero">
 				<div class="container">
 					<div class="hero__media">
-						<video class="hero__media-video is-desktop" playsinline autoplay loop muted>
+						<video class="hero__media-video is-desktop" fetchpriority="high" playsinline autoplay loop muted>
 							<source src="files/hero-video-desktop.webm" type='video/webm; codecs="vp9, vorbis"'>
 							<source src="files/hero-video-desktop.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 						</video>
-						<video class="hero__media-video is-mobile" playsinline autoplay loop muted>
+						<video class="hero__media-video is-mobile" fetchpriority="high" playsinline autoplay loop muted>
 							<source src="files/hero-video-mobile.webm" type='video/webm; codecs="vp9, vorbis"'>
 							<source src="files/hero-video-mobile.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 						</video>
@@ -67,7 +69,7 @@
 			<div class="container">
 			</div>
 		</footer>
-		<script src="js/app.min.js?_v=20260326190729"></script>
+		<script src="js/app.min.js?_v=20260326192807"></script>
 	</div>
 </body>
 

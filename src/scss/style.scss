@@ -139,7 +139,6 @@ body {
 // =============== MODULES ====================
 
 .hero {
-    // padding: rem(122) 0 rem(22) 0;
 
     padding: #{math.div(122, 1132) * 100vh} 0 #{math.div(22, 1132) * 100vh} 0;
 
@@ -149,7 +148,7 @@ body {
     }
 
     @media (min-width:$md4) {
-        // padding: rem(198) 0 rem(20) 0;
+
         padding: #{math.div(198, 768) * 100vh} 0 #{math.div(20, 768) * 100vh} 0;
     }
 
@@ -179,6 +178,30 @@ body {
     &__media-video {
         width: 100%;
         height: auto;
+        background: red;
+
+        min-height: rem(350);
+
+        @media (min-width:$md5) {
+            min-height: rem(513);
+        }
+
+        @media (min-width:$md4) {
+            min-height: rem(156);
+        }
+
+        @media (min-width:$md3) {
+            min-height: rem(183);
+        }
+
+        @media (min-width:$md2) {
+            min-height: rem(262);
+        }
+
+        @media (min-width:$md1) {
+            min-height: rem(369);
+
+        }
 
         &.is-desktop {
             @media (max-width:$md4) {
