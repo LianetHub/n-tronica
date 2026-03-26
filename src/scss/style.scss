@@ -139,26 +139,31 @@ body {
 // =============== MODULES ====================
 
 .hero {
-    padding: rem(122) 0 rem(22) 0;
+    // padding: rem(122) 0 rem(22) 0;
+
+    padding: #{math.div(122, 1132) * 100vh} 0 #{math.div(22, 1132) * 100vh} 0;
 
     @media (min-width:$md5) {
         padding: rem(120) 0 rem(42) 0;
+        padding: #{math.div(120, 1024) * 100vh} 0 #{math.div(42, 1024) * 100vh} 0;
     }
 
     @media (min-width:$md4) {
-        padding: rem(198) 0 rem(20) 0;
+        // padding: rem(198) 0 rem(20) 0;
+        padding: #{math.div(198, 768) * 100vh} 0 #{math.div(20, 768) * 100vh} 0;
     }
 
     @media (min-width:$md3) {
-        padding: rem(147) 0 rem(20) 0;
+        padding: #{math.div(147, 675) * 100vh} 0 #{math.div(20, 675) * 100vh} 0;
     }
 
     @media (min-width:$md2) {
-        padding: rem(230) 0 rem(29) 0;
+        padding: #{math.div(230, 972) * 100vh} 0 #{math.div(29, 972) * 100vh} 0;
+
     }
 
     @media (min-width:$md1) {
-        padding: rem(329) 0 rem(42) 0;
+        padding: #{math.div(329, 1440) * 100vh} 0 #{math.div(42, 1440) * 100vh} 0;
     }
 
     // .hero__media
