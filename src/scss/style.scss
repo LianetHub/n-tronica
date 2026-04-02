@@ -90,6 +90,8 @@ body {
 .page {
     flex: 1 1 auto;
     overflow-x: clip;
+    display: flex;
+    flex-direction: column;
 }
 
 // ================== ОБОЛОЧКА ===============================
@@ -139,35 +141,42 @@ body {
 // =============== MODULES ====================
 
 .hero {
-
-    padding: #{math.div(122, 1132) * 100vh} 0 #{math.div(22, 1132) * 100vh} 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: #{math.div(122, 1132) * 100vh} 0 #{math.div(36, 1132) * 100vh} 0;
 
     @media (min-width:$md5) {
         padding: rem(120) 0 rem(42) 0;
-        padding: #{math.div(120, 1024) * 100vh} 0 #{math.div(42, 1024) * 100vh} 0;
+        padding: #{math.div(120, 1024) * 100vh} 0 #{math.div(40, 1024) * 100vh} 0;
     }
 
     @media (min-width:$md4) {
-
-        padding: #{math.div(198, 768) * 100vh} 0 #{math.div(20, 768) * 100vh} 0;
+        padding: #{math.div(198, 768) * 100vh} 0 #{math.div(32, 768) * 100vh} 0;
     }
 
     @media (min-width:$md3) {
-        padding: #{math.div(147, 675) * 100vh} 0 #{math.div(20, 675) * 100vh} 0;
+        padding: #{math.div(147, 675) * 100vh} 0 #{math.div(36, 675) * 100vh} 0;
     }
 
     @media (min-width:$md2) {
-        padding: #{math.div(230, 972) * 100vh} 0 #{math.div(29, 972) * 100vh} 0;
-
+        padding: #{math.div(230, 972) * 100vh} 0 #{math.div(42, 972) * 100vh} 0;
     }
 
     @media (min-width:$md1) {
-        padding: #{math.div(329, 1440) * 100vh} 0 #{math.div(42, 1440) * 100vh} 0;
+        padding: #{math.div(329, 1440) * 100vh} 0 #{math.div(64, 1440) * 100vh} 0;
+    }
+
+    .container {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
     }
 
     // .hero__media
     &__media {
         width: 100%;
+        margin-bottom: auto;
 
         & img {
             width: 100%;
@@ -227,34 +236,40 @@ body {
 
         @media (min-width:$md5) {
             margin-top: rem(90);
-            width: 63%;
+            width: rem(392);
 
             @media (max-width:$md4) {
-                margin-right: rem(-84);
+                margin-right: rem(-100);
             }
         }
 
         @media (min-width:$md4) {
-            width: 50%;
+            width: rem(400);
             margin-top: rem(120);
             padding-left: rem(12);
+            margin-right: rem(-36);
         }
 
         @media (min-width:$md3) {
+            width: 50%;
             margin-top: rem(53);
+            margin-right: 0;
             padding-left: rem(12);
-
         }
 
         @media (min-width:$md2) {
+            width: rem(648);
             padding-left: rem(18);
             margin-top: rem(103);
+            margin-right: rem(-30);
 
         }
 
         @media (min-width:$md1) {
             padding-left: 1.5rem;
+            width: rem(939);
             margin-top: rem(161);
+            margin-right: rem(-30);
 
         }
     }
@@ -284,9 +299,6 @@ body {
             font-size: rem(31);
             line-height: math.div(36, 31);
 
-            @media (max-width:$md1) {
-                margin-right: rem(-7);
-            }
         }
 
         @media (min-width:$md1) {
@@ -298,8 +310,8 @@ body {
     // .hero__subtitle
     &__subtitle {
         margin-top: 1rem;
-        font-size: rem(15);
-        line-height: math.div(18, 15);
+        font-size: rem(14);
+        line-height: math.div(17, 14);
 
         @media (min-width:$md5) {
             margin-top: rem(18);
@@ -309,8 +321,8 @@ body {
 
         @media (min-width:$md4) {
             margin-top: rem(17);
-            font-size: rem(15);
-            line-height: math.div(18, 15);
+            font-size: rem(14);
+            line-height: math.div(17, 14);
 
             @media (max-width:$md3) {
                 margin-right: rem(-30);
@@ -318,6 +330,8 @@ body {
         }
 
         @media (min-width:$md3) {
+
+
             @media (max-width:$md2) {
                 max-width: rem(400);
             }
@@ -325,14 +339,14 @@ body {
 
         @media (min-width:$md2) {
             margin-top: rem(23);
-            font-size: rem(18);
-            line-height: math.div(22, 18);
+            font-size: rem(22);
+            line-height: math.div(26, 22);
         }
 
         @media (min-width:$md1) {
             margin-top: 2rem;
-            font-size: rem(27);
-            line-height: math.div(33, 27);
+            font-size: rem(32);
+            line-height: math.div(38, 32);
 
         }
     }
