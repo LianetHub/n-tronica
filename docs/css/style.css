@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Nanotronica";
   font-display: swap;
-  src: url("../fonts/Nanotronica-Bold.woff2") format("woff2"), url("../fonts/Nanotronica-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Nanotronica-Regular.woff2") format("woff2"), url("../fonts/Nanotronica-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Nanotronica";
   font-display: swap;
-  src: url("../fonts/Nanotronica-Regular.woff2") format("woff2"), url("../fonts/Nanotronica-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Nanotronica-Bold.woff2") format("woff2"), url("../fonts/Nanotronica-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -275,6 +275,14 @@ body {
 @media (min-width: 767.98px) {
   .header__logo {
     max-width: 10.3125rem;
+  }
+
+  .header__contact::before {
+    width: 1em;
+  }
+
+  .header__contact::after {
+    margin-right: 0.3125rem;
   }
 
   .container {

@@ -71,6 +71,10 @@
             font-weight: 700;
             width: 0.8em;
 
+            @media (min-width:$md5) {
+                width: 1em;
+            }
+
             @media (min-width:$md3) {
                 width: 1.1em;
 
@@ -86,6 +90,11 @@
             width: rem(9);
             height: rem(9);
             margin-right: rem(3);
+
+            @media (min-width:$md5) {
+                margin-right: rem(5);
+
+            }
 
             @media (min-width:$md4) {
                 margin-right: rem(6);
