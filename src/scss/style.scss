@@ -144,7 +144,7 @@ body {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    padding: #{math.div(122, 1132) * 100vh} 0 #{math.div(36, 1132) * 100vh} 0;
+    padding: #{math.div(36, 1132) * 100vh} 0;
 
     @media (min-width:$md5) {
         padding: rem(120) 0 rem(42) 0;
@@ -176,7 +176,14 @@ body {
     // .hero__media
     &__media {
         width: 100%;
+
         margin-bottom: auto;
+
+        @media (max-width:$md5) {
+            margin-top: auto;
+            padding-bottom: #{math.div(36, 1132) * 100vh};
+        }
+
 
         & img {
             width: 100%;
@@ -228,7 +235,6 @@ body {
     &__text {
 
         margin-left: auto;
-        margin-top: rem(149);
 
         @media (max-width:$md5) {
             margin-right: rem(-20);
